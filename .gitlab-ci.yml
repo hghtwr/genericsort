@@ -4,9 +4,9 @@ stages:
 
 build: 
   stage: build
-  image: anapsix/alpine-java:jdk8
+  image: circleci/jdk8
   script: 
-  - ./buildAndRun.sh
+  - ./buildAndRun_remote.sh
   artifacts: 
     paths: 
     - programm.jar
