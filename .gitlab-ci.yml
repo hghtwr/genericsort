@@ -4,7 +4,7 @@ stages:
 
 build: 
   stage: build
-  image: circleci/jdk8
+  image: mcr.microsoft.com/java/jdk:11-zulu-ubuntu
   script: 
   - ./buildAndRun_remote.sh
   artifacts: 
