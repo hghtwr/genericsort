@@ -25,3 +25,5 @@ The goal of this project is to
 Compile : ```/home/development/de/akad/jav41/genericsorting/src $ javac -d bin jav41/genericsorting/GenericSort.java ``` 
 
 Run : ```/home/development/de/akad/jav41/genericsorting/src/bin $ java jav41.genericsorting.Main```
+
+Documentation: ```javadoc -d /home/development/de/akad/jav41/genericsorting/docs jav41.genericsorting```
