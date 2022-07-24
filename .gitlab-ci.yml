@@ -7,6 +7,6 @@ build:
   image: anapsix/alpine-java:jdk8
   script: 
   - ./buildAndRun.sh
-  artifactes: 
+  artifacts: 
     paths: 
     - programm.jar
