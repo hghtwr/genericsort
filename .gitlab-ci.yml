@@ -9,4 +9,4 @@ build:
   - ./buildAndRun_remote.sh
   artifacts: 
     paths: 
-    - programm.jar
+    - ./programm.jar
