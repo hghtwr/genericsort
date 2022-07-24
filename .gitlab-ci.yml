@@ -1,0 +1,12 @@
+stages: 
+- build
+
+
+build: 
+  stage: build
+  image: anapsix/alpine-java:jdk8
+  script: 
+  - ./buildAndRun.sh
+  artifactes: 
+    paths: 
+    - programm.jar
