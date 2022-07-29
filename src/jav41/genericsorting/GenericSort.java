@@ -106,12 +106,12 @@ public class GenericSort {
         int p = low, j;
 
         for (j = low + 1; j <= high; j++) {
-            if (arr[j].compareTo(arr[low]) < 0) {
+            if (arr[j].compareTo(arr[low]) > 0) {
                 swap(arr, ++p, j);
             }
         }
         swap(arr, low, p);
-        System.out.println("Array: " + Arrays.toString(arr));
+        // System.out.println("Array: " + Arrays.toString(arr));
         return p;
     }
 

@@ -18,6 +18,8 @@ The goal of this project is to
 
 ## Performance testing
 
+```export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0```
+
 ## Usage
 
 ### Compiling
