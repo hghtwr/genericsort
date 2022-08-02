@@ -121,10 +121,6 @@ public class GenericSort {
         arr[index2] = temp;
     }
 
-    // public T quickSort() {
-
-    // }
-
     /**
      * Simple function to create an array with random values of a certain length.
      * 
@@ -140,7 +136,7 @@ public class GenericSort {
         for (int i = 0; i < length; i++) {
             array[i] = rd.nextInt(100);
         }
-        return array;
+        return (Integer[]) array;
     }
 
     /**
