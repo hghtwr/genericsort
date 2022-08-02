@@ -7,7 +7,6 @@ import jav41.genericsorting.GenericSort;
 public class Main {
 
     public static void main(String[] args) {
-        long global_start = System.nanoTime();
 
         System.out.println("Hello here");
         int length = 1000;
@@ -21,9 +20,9 @@ public class Main {
         System.out.format("+-----------+-------------+--------------+----------------+%n");
         System.out.format("| Algorithms | Input length | Input Type | Execution time |%n");
 
-        Thread quicksort = new Thread(new Tester<>(1000, 1000, 100000, 'q', length, min, max, 'i'));
-        Thread bubblesort = new Thread(new Tester<>(1000, 1000, 100000, 'b', length, min, max, 'i'));
-        Thread selectionSort = new Thread(new Tester<>(1000, 1000, 100000, 's', length, min, max, 'i'));
+        Thread quicksort = new Thread(new Tester<>(1000, 1000, 1000000, 'q', length, min, max, 'i'));
+        Thread bubblesort = new Thread(new Tester<>(1000, 1000, 500000, 'b', length, min, max, 'i'));
+        Thread selectionSort = new Thread(new Tester<>(1000, 1000, 500000, 's', length, min, max, 'i'));
 
         quicksort.start();
         bubblesort.start();
