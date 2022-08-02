@@ -1,5 +1,6 @@
 stages: 
 - build
+- test
 
 
 build: 
@@ -10,3 +11,10 @@ build:
   artifacts: 
     paths: 
     - ./program.jar
+
+test: 
+  stage: test
+  image: mcr.microsoft.com/java/jdk:11-zulu-ubuntu
+  script: 
+    - ./buildAndRun_remote.sh
+  
