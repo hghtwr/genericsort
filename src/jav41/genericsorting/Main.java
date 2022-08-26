@@ -14,7 +14,7 @@ public class Main {
          */
         public static void main(String[] args) {
 
-                int length = 0;
+                int length = 25000;
                 int min = 1;
                 int max = 100000;
                 int step = 25000;
