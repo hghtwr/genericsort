@@ -10,22 +10,34 @@ The goal of this project is to
 
 ## Concept
 
-### Bubblesort
+You can use ```Tester``` as implementation to run different tests on the algorithms from ```Main```
 
-### Quicksort
 
-### Selectionsort
+![UML class diagram](./umlClassDiagram.png)
+![UML Sequence diagram](./umlSequenceDiagram.png)
 
-## Performance testing
+For detailled information see the ```/docs``` folder.
 
-```export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0```
 
 ## Usage
 
-### Compiling
 
-Compile : ```/home/development/de/akad/jav41/genericsorting/src $ javac -d bin jav41/genericsorting/GenericSort.java ``` 
+Compile : 
+```
+./jav41/genericsorting/src $ javac -d bin jav41/genericsorting/GenericSort.java 
+``` 
 
-Run : ```/home/development/de/akad/jav41/genericsorting/src/bin $ java jav41.genericsorting.Main```
+Run : 
+```
+./jav41/genericsorting/src/bin $ java jav41.genericsorting.Main
+```
 
-Documentation: ```javadoc -d /home/development/de/akad/jav41/genericsorting/docs jav41.genericsorting```
+or easier, both combined: 
+```
+jav41/genericsorting $ ./buildAndRun.sh 
+```
+
+Documentation: 
+```
+javadoc -d /home/development/de/akad/jav41/genericsorting/docs jav41.genericsorting
+```
