@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 import jav41.genericsorting.GenericSort;
 
+/**
+ * Main class to run the tests for GenericSort.java in combination with
+ * Tester.java
+ */
 public class Main {
 
         /**

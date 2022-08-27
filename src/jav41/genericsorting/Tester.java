@@ -7,6 +7,12 @@ import java.nio.file.Path;
 import java.util.List;
 import java.util.Arrays;
 
+/**
+ * A generic class that can be used to test the sorting algorithms implemented
+ * in GenericSort.java.
+ * It supports multithreading to be instantiated in multiple times in parallel
+ * for quicker testing.
+ */
 public class Tester<T extends Comparable<T>> implements Runnable {
     private T[] data;
     private int step;
