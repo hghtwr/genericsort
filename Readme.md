@@ -8,17 +8,9 @@ The goal of this project is to
 - provide a generic class for sorting primitive datatypes using three different sorting algorithms (```Quicksort```, ```Bubblesort```, ```Selectionsort```)
 - test the implementation in regards to the performance of the chosen sorting algorithm depending on the amount and type of input data
 
-## Concept
+## Docs
 
-### Bubblesort
-
-### Quicksort
-
-### Selectionsort
-
-## Performance testing
-
-```export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0```
+[Link](./docs/index.html)
 
 ## Usage
 
