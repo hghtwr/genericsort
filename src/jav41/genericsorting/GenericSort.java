@@ -2,8 +2,6 @@ package jav41.genericsorting;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
-//import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -159,7 +157,6 @@ public class GenericSort {
      */
     public static Integer[] create_integer_array(int length, int max, int min) {
         // ThreadLocalRandom rd = new ThreadLocalRandom();
-        Random rd = new Random();
         Integer[] array = new Integer[length];
         for (int i = 0; i < length; i++) {
             array[i] = ThreadLocalRandom.current().nextInt(max - min) + min;
@@ -197,10 +194,9 @@ public class GenericSort {
      *         consideration
      */
     public static Double[] create_double_array(int length, int max, int min) {
-        Random rd = new Random();
         Double[] array = new Double[length];
         for (int i = 0; i < length; i++) {
-            array[i] = min + rd.nextDouble() * (max - min);
+            array[i] = min + ThreadLocalRandom.nextDouble() * (max - min);
         }
         return array;
     }
