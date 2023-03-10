@@ -4,40 +4,46 @@ import java.util.Arrays;
 
 import jav41.genericsorting.GenericSort;
 
+/**
+ * Main class to run the tests for GenericSort.java in combination with
+ * Tester.java
+ */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello there");
-        int length = 200000;
-        int min = 1;
-        int max = 99999;
-        Integer[] random_integer = GenericSort.create_integer_array(length, min, max);
-        Float[] random_float = GenericSort.create_float_array(length, min, max);
-        Double[] random_double = GenericSort.create_double_array(length, min, max);
-        // System.out.println(Arrays.toString(random_double));
-        // GenericSort<Integer[]> genericSort = new GenericSort<Integer[]>(random);
-        // Double[] sorted = GenericSort.quicksort(random_double, 0,
-        // random_double.length - 1);
 
-        System.out.println("---- Start selection sort ----");
+        /**
+         * Main function that will create a conncurently executed test suite for the
+         * test cases.
+         * 
+         * @param args
+         */
+        public static void main(String[] args) {
 
-        Double[] selection_sorted_double = GenericSort.selectionSort(random_double.clone());
-        // Float[] selection_sorted_float = GenericSort.selectionSort(random_float);
-        // Integer[] selection_sorted_int = GenericSort.selectionSort(random_integer);
-        // System.out.println(Arrays.toString(selection_sorted_double));
+                int length = 25000;
+                int min = 1;
+                int max = 100000;
+                int step = 25000;
+                int start = length;
 
-        System.out.println("---- Start bubble sort ----");
-        Double[] bubble_sorted_double = GenericSort.bubbleSort(random_double.clone());
-        // Float[] bubble_sorted_float = GenericSort.selectionSort(random_float);
-        // Integer[] bubble_sorted_int = GenericSort.selectionSort(random_integer);
-        // System.out.println(Arrays.toString(bubble_sorted_double));
+                Thread quicksort_int = new Thread(new Tester<>(step, start, 500000, 'q', length, min, max, 'i'));
+                Thread bubblesort_int = new Thread(new Tester<>(step, start, 500000, 'b', length, min, max, 'i'));
+                Thread selectionSort_int = new Thread(new Tester<>(step, start, 500000, 's', length, min, max, 'i'));
+                Thread quicksort_double = new Thread(new Tester<>(step, start, 500000, 'q', length, min, max, 'd'));
+                Thread bubblesort_double = new Thread(new Tester<>(step, start, 500000, 'b', length, min, max, 'd'));
+                Thread selectionSort_double = new Thread(
+                                new Tester<>(step, start, 500000, 's', length, min, max, 'd'));
+                Thread quicksort_float = new Thread(new Tester<>(step, start, 500000, 'q', length, min, max, 'f'));
+                Thread bubblesort_float = new Thread(new Tester<>(step, start, 500000, 'b', length, min, max, 'f'));
+                Thread selectionSort_float = new Thread(new Tester<>(step, start, 500000, 's', length, min, max, 'f'));
 
-        System.out.println("---- Start quicksort sort ----");
-        Double[] quicksort_sorted_double = GenericSort.quicksort(random_double.clone(), 0, random_double.length - 1);
-        // Float[] quicksort_sorted_float = GenericSort.selectionSort(random_float);
-        // Integer[] quicksort_sorted_int = GenericSort.selectionSort(random_integer);
-        // System.out.println(Arrays.toString(quicksort_sorted_double));
-
-        // System.out.println(Arrays.toString(genericSort.getData()));
-    }
+                quicksort_int.start();
+                bubblesort_int.start();
+                selectionSort_int.start();
+                quicksort_double.start();
+                bubblesort_double.start();
+                selectionSort_double.start();
+                quicksort_float.start();
+                bubblesort_float.start();
+                selectionSort_float.start();
+        }
 
 }
