@@ -8,7 +8,7 @@ The goal of this project is to
 - provide a generic class for sorting primitive datatypes using three different sorting algorithms (```Quicksort```, ```Bubblesort```, ```Selectionsort```)
 - test the implementation in regards to the performance of the chosen sorting algorithm depending on the amount and type of input data
 
-## Concept
+## Docs
 
 You can use ```Tester``` as implementation to run different tests on the algorithms from ```Main```
 
@@ -18,6 +18,7 @@ You can use ```Tester``` as implementation to run different tests on the algorit
 
 For detailled information see the ```/docs``` folder.
 
+[Link](./docs/index.html)
 
 ## Usage
 
